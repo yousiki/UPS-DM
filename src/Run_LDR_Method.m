@@ -135,8 +135,8 @@ outputDir = fileparts(outputMatfile);
 if ~exist(outputDir, 'dir')
     mkdir(outputDir);
 end
-% Save n n_me1 n_me2 L_me1 L_me2 depth_me1 depth_me2 depth_gt to output.mat
-save(outputMatfile, 'n', 'n_me1', 'n_me2', 'L_me1', 'L_me2', 'depth_me1', 'depth_me2', 'depth_gt');
+% Save n n_me1 n_me2 L_me1 L_me2 depth_me1 depth_me2 depth_gt to output.mat with MATLAB 7 format
+save(outputMatfile, 'n', 'n_me1', 'n_me2', 'L_me1', 'L_me2', 'depth_me1', 'depth_me2', 'depth_gt', '-v7');
 % Log
 fprintf('Saved output to %s\n', outputMatfile);
 
